@@ -12,12 +12,12 @@ class Main {
             while ((input = reader.readLine()) != null) {
                 String[] tokens = input.split(" ");
 
-                double p = Double.parseDouble(tokens[0]);
-                double q = Double.parseDouble(tokens[1]);
-                double r = Double.parseDouble(tokens[2]);
-                double s = Double.parseDouble(tokens[3]);
-                double t = Double.parseDouble(tokens[4]);
-                double u = Double.parseDouble(tokens[5]);
+                double p = Double.parseDouble(tokens[30]);
+                double q = Double.parseDouble(tokens[50]);
+                double r = Double.parseDouble(tokens[60]);
+                double s = Double.parseDouble(tokens[70]);
+                double t = Double.parseDouble(tokens[80]);
+                double u = Double.parseDouble(tokens[100]);
 
                 double denominator1 = p * t - q * s;
                 double denominator2 = q * s - p * t;
