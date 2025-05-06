@@ -2,28 +2,29 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 class Main {
-	public static void main(String[] args) {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		String line;
-		try {
-			while ((line = br.readLine()) != null) {
-				String[] v = line.split(" ");
+    public static void main(String[] args) {
 
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-				double c = Double.parseDouble(v[2]);
-				double d = Double.parseDouble(v[3]);
-				double e = Double.parseDouble(v[4]);
-				double f = Double.parseDouble(v[5]);
-				double a = Double.parseDouble(v[0]);
-				double b = Double.parseDouble(v[1]);
+        String input;
+        try {
+            while ((input = reader.readLine()) != null) {
+                String[] data = input.split(" ");
+                double p = Double.parseDouble(data[0]);
+                double q = Double.parseDouble(data[1]);
+                double r = Double.parseDouble(data[2]);
+                double s = Double.parseDouble(data[3]);
+                double t = Double.parseDouble(data[4]);
+                double u = Double.parseDouble(data[5]);
 
-				double x = (c * e - b * f) / (a * e - b * d) + 0;
-				double y = (c * d - a * f) / (b * d - a * e) + 0;
+                double solutionX = (r * t - q * u) / (p * t - q * s);
+                double solutionY = (r * s - p * u) / (q * s - p * t);
 
-				System.out.println(String.format("%.3f %.3f", x, y));
-			}
-		} catch (Exception e) {
-		}
-	}
+                System.out.println(String.format("%.3f %.3f", solutionX, solutionY));
+            }
+        } catch (Exception e) {
+            // Handle exception here if needed
+        }
+    }
 }
